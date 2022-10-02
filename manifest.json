@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Spotify2Tabs",
+  "version": "1.0",
+  "description": "Opens a UltimateGuitar tab based on the song currently playing.",
+  "background": {
+    "scripts": ["index.js"]
+  },
+  "browser_action": {    
+        "default_icon": "spotify2tabs.png"
+  },
+  "permissions": ["activeTab"]
+}

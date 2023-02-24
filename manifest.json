@@ -7,7 +7,10 @@
     "scripts": ["index.js"]
   },
   "browser_action": {    
-        "default_icon": "spotify2tabs.png"
+        "default_icon": "deactivated_icon.png"
   },
-  "permissions": ["activeTab"]
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
 }

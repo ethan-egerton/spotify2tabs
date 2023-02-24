@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">A browser extenstion that allows you to quickly access tabs from what you are listening to.</h4>
+<h4 align="center">A browser extenstion that allows you to quickly access guitar tabs for what you are currently listening to.</h4>
 
 <p align="center">
   <a href="#how-to-use">How To Use</a> •
@@ -23,7 +23,7 @@
 
 ## How To Use
 
-Whilst listening to any song using the Spotify Web Player, press the Spotify2Tabs icon on your toolbar to immediately. The addon will deactivate when the active tab isn't the Spotify Web Player.
+Whilst listening to any song using the Spotify Web Player, press the Spotify2Tabs icon on your toolbar to immediately show the guitar tabs for the current song. The addon will deactivate when the active tab isn't the Spotify Web Player.
 
 ## Download
 

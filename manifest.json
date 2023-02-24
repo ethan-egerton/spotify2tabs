@@ -7,7 +7,7 @@
     "scripts": ["index.js"]
   },
   "browser_action": {    
-        "default_icon": "deactivated_icon.png"
+        "default_icon": "assets/deactivated_icon.png"
   },
   "permissions": [
     "activeTab",

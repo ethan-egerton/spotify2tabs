@@ -2,13 +2,13 @@ let flag = false;
 
 const deactivatedIcon = {
     path: {
-        "48": "deactivated_icon.png"
+        "48": "/assets/deactivated_icon.png"
     }
 }
 
 const activatedIcon = {
     path: {
-        "48": "activated_icon.png"
+        "48": "/assets/activated_icon.png"
     }
 }
 

@@ -7,7 +7,7 @@
   <br>
 </h1>
 
-<h4 align="center">A browser extenstion that allows you to quickly access guitar tabs for what you are currently listening to.</h4>
+<h4 align="center">A browser extension that allows you to quickly access guitar tabs for what you are currently listening to.</h4>
 
 <p align="center">
   <a href="#how-to-use">How To Use</a> •

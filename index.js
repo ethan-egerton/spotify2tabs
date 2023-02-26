@@ -32,3 +32,13 @@ browser.tabs.onActivated.addListener((activeInfo) => {
         }
     })
 })
+
+browser.commands.onCommand.addListener(function (command) {
+    switch (command) {
+        case 'activate':
+            browser.tabs.executeScript({file: "/spotify2tabs.js"});
+            break;
+        default:
+            console.log(`Command ${command} not found`);
+    }
+});

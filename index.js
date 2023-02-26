@@ -10,23 +10,15 @@ const icons = {
     }
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-    if (flag) {
-        browser.tabs.executeScript({file: "/spotify2tabs.js"});
-    }
-});
-
-browser.tabs.onActivated.addListener((activeInfo) => {
+function runScript() {
     browser.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         const tab = tabs[0];
         const url = tab.url;
-        console.log(url);
-        if (!url.includes('https://open.spotify.com/')) {
-            browser.browserAction.setIcon({tabId: activeInfo.tabId, ...deactivatedIcon});
-            flag = false;
-        } else {
-            browser.browserAction.setIcon({tabId: activeInfo.tabId, ...activatedIcon});
-            flag = true;
+        if (url.includes('https://open.spotify.com/')) {
+            browser.tabs.executeScript({file: "/spotify2tabs.js"});
         }
     })
-})
+}
+
+browser.tabs.onUpdated.addListener(runScript);
+browser.tabs.onActivated.addListener(runScript);

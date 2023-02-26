@@ -1,14 +1,12 @@
 let flag = false;
 
-const deactivatedIcon = {
+const icons = {
     path: {
-        "48": "/assets/deactivated_icon.png"
-    }
-}
-
-const activatedIcon = {
-    path: {
-        "48": "/assets/activated_icon.png"
+        "16": "./assets/icons/spotify2tabs/16.png",
+        "32": "./assets/icons/spotify2tabs/32.png",
+        "48": "./assets/icons/spotify2tabs/48.png",
+        "64": "./assets/icons/spotify2tabs/64.png",
+        "256": "./assets/icons/spotify2tabs/256.png"
     }
 }
 

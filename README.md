@@ -23,7 +23,7 @@
 
 ## How To Use
 
-Whilst listening to any song using the Spotify Web Player, press the Spotify2Tabs icon on your toolbar to immediately show the guitar tabs for the current song. The addon will deactivate when the active tab isn't the Spotify Web Player.
+Whilst listening to any song using the Spotify Web Player, press the guitar icon located near the volume controls in the bottom right. A new tab will then be opened with the tab to the song you are currently listening to. To change the filters on tabs, press the Spotify2Tabs icon to open the menu, then select the filter.
 
 ## Download
 
@@ -31,7 +31,7 @@ You can [download](https://addons.mozilla.org/en-GB/firefox/addon/spotify2tabs/)
 
 ## How it works
 
-The extension activates once it detects you are tabbed into the Spotify Web Player. When pressed, the extension takes the song and artist name directly from the now-playing-bar and opens a new tab with the search results of [https://www.ultimate-guitar.com/](ultimate-guitar.com).
+This extension inserts a button into the Spotify Web Player. When pressed, the extension takes the song and artist name directly from the now-playing-bar and opens a new tab with the search results of [https://www.ultimate-guitar.com/](ultimate-guitar.com). The settings are stored in and retrived from browser storage.
 
 I made this because it was a hassle to type in the song name every time I wanted to play a song on my guitar.
 

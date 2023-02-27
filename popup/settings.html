@@ -2,11 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="choose_beast.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
-    <h1>hello</h1>
+    <section>
+      <div class="topbar">
+        <img class="topbar-icon" src="../assets/icons/spotify2tabs/256.png">
+        <h1>Spotify2Tabs</h1>
+      </div>
+      <hr>
+    </section>
+    <section class="settings">
+      <h2>Settings</h2>
+      <div class="option">
+        <p>Sort By: </p>
+        <select name="sort-by" id="sort-by" class="dropdown-sort-by">
+          <option value="all">All</option>
+          <option value="chords">Chords</option>
+          <option value="tabs">Tabs</option>
+          <option value="bass">Bass</option>
+          <option value="ukulele">Ukulele</option>
+        </select>
+      </div>
+      <div class="option">
+        <p>Open highest rated sheet: </p>
+        <input id="open-best-sheet" type="checkbox">
+      </div>
+    </section>
     <script src="index.js"></script>
   </body>
 </html>

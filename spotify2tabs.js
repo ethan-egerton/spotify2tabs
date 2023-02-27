@@ -1,4 +1,4 @@
-function openGuitarTab() {
+async function openGuitarTab() {
     const songPlaying = document.querySelector('[data-testid=context-item-link]').textContent;
     const artist = document.querySelector('[data-testid=context-item-info-artist]').textContent;
     let searchQuery = artist.concat('%20', songPlaying).replace(/ /g, "%20");
@@ -13,7 +13,38 @@ function openGuitarTab() {
         searchQuery = searchQuery.replace(/&/g, "and");
     }
 
-    const url = `https://www.ultimate-guitar.com/search.php?search_type=title&value=${searchQuery}`;
+    const isCheckedPromise = await browser.storage.local.get({isChecked:''});
+    const isChecked = isCheckedPromise.isChecked;
+
+    const sortByPromise = await browser.storage.local.get({sortBy:''});
+    let sortBy = sortByPromise.sortBy;
+
+    if (sortBy.length == 0) {sortBy = "all";}
+
+    let sortCode;
+
+    switch (sortBy) {
+      case "all":
+        sortCode = 0
+        break;
+      case "chords":
+        sortCode = 300
+        break;
+      case "tabs":
+          sortCode = 200
+          break;
+      case "bass":
+        sortCode = 400
+        break;
+      case "ukulele":
+          sortCode = 800
+          break;
+    
+      default:
+        break;
+    }
+
+    const url = `https://www.ultimate-guitar.com/search.php?search_type=title&value=${searchQuery}&type=${sortCode}`;
 
     window.open(url);    
 }

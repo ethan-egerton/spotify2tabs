@@ -1,5 +1,61 @@
 html,
 body {
-  width: 100px;
-  height: 100px;
+  background-color: #242424;
+  color: #fff;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  height: 400px;
+  width: 300px;
+}
+
+h1 {
+  margin: 0;
+  font-size: x-large;
+  font-weight: 500;
+  padding-top: 0.2rem;
+  padding: 4px;
+}
+
+h2 {
+  margin: 0;
+  font-size: large;
+  font-weight: 500;
+  padding-top: 0.2rem;
+  padding: 4px;
+}
+
+hr {
+  margin: 0;
+
+  color: #555555;
+}
+
+.topbar {
+  background-color: #121212;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dropdown-sort-by {
+  height: 2rem;
+  align-self: right;
 }

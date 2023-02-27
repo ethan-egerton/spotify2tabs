@@ -21,7 +21,6 @@
         "default_popup": "popup/settings.html"
   },
   "permissions": [
-    "activeTab",
     "<all_urls>",
     "tabs",
     "storage"

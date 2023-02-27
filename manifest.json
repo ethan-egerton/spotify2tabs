@@ -22,7 +22,6 @@
   },
   "host_permissions": ["<all_urls>"],
   "permissions": [
-    "activeTab",
     "<all_urls>",
     "tabs",
     "scripting",

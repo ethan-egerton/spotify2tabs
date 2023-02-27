@@ -13,9 +13,6 @@ async function openGuitarTab() {
         searchQuery = searchQuery.replace(/&/g, "and");
     }
 
-    const isCheckedPromise = await browser.storage.local.get({isChecked:''});
-    const isChecked = isCheckedPromise.isChecked;
-
     const sortByPromise = await browser.storage.local.get({sortBy:''});
     let sortBy = sortByPromise.sortBy;
 
@@ -44,7 +41,7 @@ async function openGuitarTab() {
         break;
     }
 
-    const url = `https://www.ultimate-guitar.com/search.php?search_type=title&value=${searchQuery}&type=${sortCode}`;
+    let url = `https://www.ultimate-guitar.com/search.php?search_type=title&value=${searchQuery}&type=${sortCode}`;
 
     window.open(url);    
 }

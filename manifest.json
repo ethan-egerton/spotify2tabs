@@ -3,9 +3,19 @@
   "name": "Spotify2Tabs",
   "version": "1.1.1",
   "description": "Opens a UltimateGuitar tab based on the song currently playing.",
+  "commands": {
+    "activate": {
+        "suggested_key": {
+            "default": "Ctrl+Shift+Space",
+            "mac": "Command+Shift+Space"
+        },
+        "description": "Opens a UltimateGuitar tab based on the song currently playing."
+    }
+},
   "background": {
     "scripts": ["index.js"]
   },
+  
   "browser_action": {    
         "default_icon": "assets/icons/spotify2tabs/256.png",
         "default_popup": "popup/settings.html"

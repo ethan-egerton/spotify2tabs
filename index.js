@@ -11,24 +11,30 @@ const icons = {
 }
 
 function runScript() {
-    browser.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         const tab = tabs[0];
         const url = tab.url;
         if (url.includes('https://open.spotify.com/')) {
-            browser.tabs.executeScript({file: "/spotify2tabs.js"});
+            chrome.scripting.executeScript({
+                target: {tabId: tab.id},
+                files: ["/spotify2tabs.js"]
+        });
         }
     })
 }
 
-browser.commands.onCommand.addListener(function (command) {
+chrome.commands.onCommand.addListener(function (command) {
     switch (command) {
         case 'activate':
-            browser.tabs.executeScript({file: "/spotify2tabs.js"});
+            chrome.scripting.executeScript({
+                target: {tabId: tab.id},
+                files: ["/spotify2tabs.js"]
+        });
             break;
         default:
             console.log(`Command ${command} not found`);
     }
 });
 
-browser.tabs.onUpdated.addListener(runScript);
-browser.tabs.onActivated.addListener(runScript);
+chrome.tabs.onUpdated.addListener(runScript);
+chrome.tabs.onActivated.addListener(runScript);

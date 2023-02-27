@@ -13,7 +13,7 @@ async function openGuitarTab() {
         searchQuery = searchQuery.replace(/&/g, "and");
     }
 
-    const sortByPromise = await browser.storage.local.get({sortBy:''});
+    const sortByPromise = await chrome.storage.local.get({sortBy:''});
     let sortBy = sortByPromise.sortBy;
 
     if (sortBy.length == 0) {sortBy = "all";}

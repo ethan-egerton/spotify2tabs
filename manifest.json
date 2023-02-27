@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Spotify2Tabs",
   "version": "1.1.1",
   "description": "Opens a UltimateGuitar tab based on the song currently playing.",
@@ -11,19 +11,21 @@
         },
         "description": "Opens a UltimateGuitar tab based on the song currently playing."
     }
-},
+  },
   "background": {
-    "scripts": ["index.js"]
+    "service_worker": "index.js"
   },
   
-  "browser_action": {    
+  "action": {    
         "default_icon": "assets/icons/spotify2tabs/256.png",
         "default_popup": "popup/settings.html"
   },
+  "host_permissions": ["<all_urls>"],
   "permissions": [
     "activeTab",
     "<all_urls>",
     "tabs",
+    "scripting",
     "storage"
   ]
 }

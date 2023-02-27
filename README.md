@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <img src="./assets/high_res_icon.png" alt="Spotify2Tabs" width="300">
+  <img src="./assets/readme/400.png" alt="Spotify2Tabs" width="300">
   <br>
   Spotify2Tabs
   <br>
@@ -16,7 +16,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](/assets/screenshot.gif)
+![screenshot](/assets/readme/demonstration.gif)
 
 > **Note**
 > This extension is currently only available for Firefox.

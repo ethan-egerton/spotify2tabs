@@ -17,10 +17,13 @@
   },
   
   "browser_action": {    
-        "default_icon": "assets/deactivated_icon.png"
+        "default_icon": "assets/icons/spotify2tabs/256.png",
+        "default_popup": "popup/settings.html"
   },
   "permissions": [
     "activeTab",
-    "tabs"
+    "<all_urls>",
+    "tabs",
+    "storage"
   ]
 }

@@ -1,37 +1,24 @@
 let flag = false;
 
-const deactivatedIcon = {
+const icons = {
     path: {
-        "48": "/assets/deactivated_icon.png"
+        "16": "./assets/icons/spotify2tabs/16.png",
+        "32": "./assets/icons/spotify2tabs/32.png",
+        "48": "./assets/icons/spotify2tabs/48.png",
+        "64": "./assets/icons/spotify2tabs/64.png",
+        "256": "./assets/icons/spotify2tabs/256.png"
     }
 }
 
-const activatedIcon = {
-    path: {
-        "48": "/assets/activated_icon.png"
-    }
-}
-
-browser.browserAction.onClicked.addListener((tab) => {
-    if (flag) {
-        browser.tabs.executeScript({file: "/spotify2tabs.js"});
-    }
-});
-
-browser.tabs.onActivated.addListener((activeInfo) => {
+function runScript() {
     browser.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         const tab = tabs[0];
         const url = tab.url;
-        console.log(url);
-        if (!url.includes('https://open.spotify.com/')) {
-            browser.browserAction.setIcon({tabId: activeInfo.tabId, ...deactivatedIcon});
-            flag = false;
-        } else {
-            browser.browserAction.setIcon({tabId: activeInfo.tabId, ...activatedIcon});
-            flag = true;
+        if (url.includes('https://open.spotify.com/')) {
+            browser.tabs.executeScript({file: "/spotify2tabs.js"});
         }
     })
-})
+}
 
 browser.commands.onCommand.addListener(function (command) {
     switch (command) {
@@ -42,3 +29,6 @@ browser.commands.onCommand.addListener(function (command) {
             console.log(`Command ${command} not found`);
     }
 });
+
+browser.tabs.onUpdated.addListener(runScript);
+browser.tabs.onActivated.addListener(runScript);

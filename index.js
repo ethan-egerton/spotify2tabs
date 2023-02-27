@@ -12,31 +12,34 @@ const activatedIcon = {
     }
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
+chrome.action.onClicked.addListener((tab) => {
     if (flag) {
-        browser.tabs.executeScript({file: "/spotify2tabs.js"});
+        chrome.scripting.executeScript({
+            target: {tabId: tab.id},
+            files: ["/spotify2tabs.js"]
+        });
     }
 });
 
-browser.tabs.onActivated.addListener((activeInfo) => {
-    browser.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+chrome.tabs.onActivated.addListener((activeInfo) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         const tab = tabs[0];
         const url = tab.url;
         console.log(url);
         if (!url.includes('https://open.spotify.com/')) {
-            browser.browserAction.setIcon({tabId: activeInfo.tabId, ...deactivatedIcon});
+            chrome.action.setIcon({tabId: activeInfo.tabId, ...deactivatedIcon});
             flag = false;
         } else {
-            browser.browserAction.setIcon({tabId: activeInfo.tabId, ...activatedIcon});
+            chrome.action.setIcon({tabId: activeInfo.tabId, ...activatedIcon});
             flag = true;
         }
     })
 })
 
-browser.commands.onCommand.addListener(function (command) {
+chrome.commands.onCommand.addListener(function (command) {
     switch (command) {
         case 'activate':
-            browser.tabs.executeScript({file: "/spotify2tabs.js"});
+            chrome.scripting.executeScript({file: "/spotify2tabs.js"});
             break;
         default:
             console.log(`Command ${command} not found`);

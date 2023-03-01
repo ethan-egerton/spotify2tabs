@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Download</a> •
+  <a href="#downloads">Downloads</a> •
   <a href="#how-it-works">How It Works</a> •
   <a href="#license">License</a>
 </p>
@@ -19,15 +19,23 @@
 ![screenshot](/assets/readme/demonstration.gif)
 
 > **Note**
-> This extension is currently only available for Firefox.
+> This extension is currently only available for Chrome and Firefox.
 
 ## How To Use
 
 Whilst listening to any song using the Spotify Web Player, press the guitar icon located near the volume controls in the bottom right. A new tab will then be opened with the tab to the song you are currently listening to. To change the filters on tabs, press the Spotify2Tabs icon to open the menu, then select the filter.
 
-## Download
+## Downloads
 
-You can [download](https://addons.mozilla.org/en-GB/firefox/addon/spotify2tabs/) the latest version of Spotify2Tabs via the Firefox Browser Add-ons website.
+You can download the latest version of Spotify2Tabs via the Browser extension websites for Chrome and Firefox. 
+
+Firefox download for Spotify2Tabs v1.2.0: 
+
+[Download](https://addons.mozilla.org/en-GB/firefox/addon/spotify2tabs/)
+
+Chrome download for Spotify2Tabs v1.2.0: 
+
+[Download](https://chrome.google.com/webstore/detail/spotify2tabs/bajiilcejpdacboebjfahpmogjilebnf?hl=en-GB)
 
 ## How it works
 
